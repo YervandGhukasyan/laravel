@@ -11,15 +11,6 @@
 |
 */
 
-
-
-Auth::routes();
-
-Route::resource('/', 'IndexController');
-Route::get('/home', 'HomeController@index');
-
-Route::group(['prefix'=>'admin'],function (){
-    Route::resource('/','IndexController');
-    Route::resource('prType','ProductTypeController');
-    Route::resource('product','ProductController');
+Route::get('/', function () {
+    return view('welcome');
 });
